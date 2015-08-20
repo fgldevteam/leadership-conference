@@ -4,10 +4,15 @@
 @font-face { font-family: GalaxiePolarisCondensed-Bold; font-weight: bold; src: url('fonts/GalaxiePolarisCondensed-Bold.otf'); }
 @font-face { font-family: GalaxiePolarisCondensed-Light; font-weight: bold; src: url('fonts/GalaxiePolarisCondensed-Light.otf'); }
 
+
 body{
 	background-color: #fff;
 	font: arial, sans-serif;
-	background: url('/images/greenbg.png') top left no-repeat fixed;
+		background: url('/images/greenbg.png') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 small.red{ color: #c00;  font-weight: bold; font-size: 13px; }
@@ -208,6 +213,7 @@ ul{
 	padding-top: 5px;
 	padding-bottom: 15px;
 	margin-left: 15px;
+	color: #fff;
 }
 
 	li{

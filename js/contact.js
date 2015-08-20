@@ -25,9 +25,9 @@ $(document).ready(function() {
 		//var activityVal = $("#activity").val();		
 		var activity1Val = $('input[name=day1]:checked', '#regform').val()
 		var activity2Val = $('input[name=day2]:checked', '#regform').val()
-		var shirtVal = $("#shirtsize").val();
-		var jacketVal = $("#jacketsize").val();
-		var shoesVal = $("#shoesize").val();
+		// var shirtVal = $("#shirtsize").val();
+		// var jacketVal = $("#jacketsize").val();
+		// var shoesVal = $("#shoesize").val();
 
 
 		//validation
@@ -105,10 +105,8 @@ $(document).ready(function() {
    				  diet: dietVal,
    				  bus: busVal,
    				  activity_1: activity1Val,   				  
-   				  activity_2: activity2Val,   				  
-   				  shirt: shirtVal,
-   				  jacket: jacketVal,
-   				  shoes: shoesVal
+   				  activity_2: activity2Val
+
    				},
    					function(data){
 						$("#regform").slideUp("normal", function() {				  						

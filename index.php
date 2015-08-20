@@ -101,77 +101,9 @@
 						</tr>
 					</table>
 					<br />
-					<table>
-						<tr>
-							<td class="size-label-td"><label class="size-label" id="label-shirt-size">Shirt Size</label></td>
-							<td class="size-select-td">
-								<select name="shirtsize" id="shirtsize" class="size-select">
-								                        <option value=""></option>
-								                        <option value="M-S">Men's Small</option>
-								                        <option value="M-M">Men's Medium</option>
-								                        <option value="M-L">Men's Large</option>
-								                        <option value="M-XL">Men's X-Large</option>
-								                        <option value="M-XXL">Men's XX-Large</option>
-								                        <option value="W-S">Women's Small</option>
-								                        <option value="W-M">Women's Medium</option>
-								                        <option value="W-L">Women's Large</option>
-								                        <option value="W-XL">Women's X-Large</option>
-								                    </select>
-							
-							</td>
-							<td class="size-label-td"><label class="size-label" id="label-jacket-size">Jacket Size</label></td>
-							<td class="size-select-td">
-								<select name="jacketsize" id="jacketsize" class="size-select">
-								                        <option value=""></option>
-								                        <option value="M-S">Men's Small</option>
-								                        <option value="M-M">Men's Medium</option>
-								                        <option value="M-L">Men's Large</option>
-								                        <option value="M-XL">Men's X-Large</option>
-								                        <option value="M-XXL">Men's XX-Large</option>
-								                        <option value="W-S">Women's Small</option>
-								                        <option value="W-M">Women's Medium</option>
-								                        <option value="W-L">Women's Large</option>
-								                        <option value="W-XL">Women's X-Large</option>
-								                    </select>
-							</td>
-							
-							<td class="size-label-td"><label class="size-label" id="label-shoe-size">Shoe Size</label></td>
-							<td class="size-select-td">
-								<select name="shoesize" id="shoesize" class="size-select">
-								                        <option value=""></option>
-								                        <option value="M-7">Men's 7</option>
-								                        <option value="M-7.5">Men's 7.5</option>
-								                        <option value="M-8">Men's 8</option>
-								                        <option value="M-8.5">Men's 8.5</option>
-								                        <option value="M-9">Men's 9</option>
-								                        <option value="M-9.5">Men's 9.5</option>
-								                        <option value="M-10">Men's 10</option>
-								                        <option value="M-10.5">Men's 10.5</option>
-								                        <option value="M-11">Men's 11</option>
-								                        <option value="M-11.5">Men's 11.5</option>
-								                        <option value="M-12">Men's 12</option>
-								                        <option value="M-12.5">Men's 12.5</option>
-								                        <option value="M-13">Men's 13</option>                        
-								                        <option value="W-6">Women's 6</option>
-								                        <option value="W-6.5">Women's 6.5</option>
-								                        <option value="W-7">Women's 7</option>
-								                        <option value="W-7.5">Women's 7.5</option>
-								                        <option value="W-8">Women's 8</option>
-								                        <option value="W-8.5">Women's 8.5</option>
-								                        <option value="W-9">Women's 9</option>
-								                        <option value="W-9.5">Women's 9.5</option>
-								                        <option value="W-10">Women's 10</option>
-								                        <option value="W-10.5">Women's 10.5</option>
-								                        <option value="W-11">Women's 11</option>
-								                        <option value="W-11.5">Women's 11.5</option>
-								                        <option value="W-12">Women's 12</option> 
-								                    </select>
-							</td>
-						</tr>											
-					</table>
-					<br />
-					<h1 id="activity-header">Activity Selection &nbsp;&nbsp;&mdash;&nbsp;&nbsp; You may pick one from each day if you choose</h1>
 					
+					<h1 id="activity-header">Activity Selection &nbsp;&nbsp;&mdash;&nbsp;&nbsp; You may pick one from each day if you choose</h1>
+					<p><strong>* OPTIONAL NOT MANDATORY *</strong></p>
 					<table>
 						<tr>
 							<td valign="top" width="55%">

@@ -14,7 +14,7 @@ if (mysqli_connect_errno()) {
 }
 
 //insert registration
-$q = "INSERT INTO registrations (first, last, email, phone, office, diet, bus, activity_1, activity_2, shirt, jacket, shoes) VALUES(
+$q = "INSERT INTO registrations (first, last, email, phone, office, diet, bus, activity_1, activity_2) VALUES(
 	 '".$_POST['fname']."', 
 	'".$_POST['lname']."', 
 	'".$_POST['email']."', 
@@ -23,10 +23,7 @@ $q = "INSERT INTO registrations (first, last, email, phone, office, diet, bus, a
 	'".$_POST['diet']."',
 	'".$_POST['bus']."',
 	'".$_POST['activity_1']."',
-	'".$_POST['activity_2']."',		
-	'".$_POST['shirt']."',
-	'".$_POST['jacket']."',														 
-	 '".$_POST['shoes']."'
+	'".$_POST['activity_2']."'
 	 )";
 	 
 mysqli_query($connection, $q) or die ("Error in query: $q. ".mysqli_error($connection));
