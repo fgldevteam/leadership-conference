@@ -43,25 +43,23 @@ $usermessage .= "Jacket Size: " . $_POST['jacket'] . "\n";
 $usermessage .= "Shoe Size: " . $_POST['shoes'] . "\n";
 
 //connect to DB
-$host = "internal-db.s51258.gridserver.com";
-$user = "db51258";
-$pass = "3nc50Xj8y5";
-$db = "db51258_leadership";
+$host = "127.0.0.1";
+$user = "root";
+$pass = "";
+$db = "leadership";
 
 $connection = mysql_connect($host, $user, $pass) or die ("Unable to connect!");
 mysql_select_db($db) or die ("Unable to select database!"); 
 
 //insert registration
-$q = "INSERT INTO registrations2014 (first, last, email, phone, office, diet, roommate, bus, activity, activity_1, activity_2, shirt, jacket, shoes) VALUES(
+$q = "INSERT INTO registrations (first, last, email, phone, office, diet, bus, activity_1, activity_2, shirt, jacket, shoes) VALUES(
 	 '".$_POST['fname']."', 
 	'".$_POST['lname']."', 
 	'".$_POST['email']."', 
 	'".$_POST['phone']."', 
 	'".$_POST['office']."',
 	'".$_POST['diet']."',
-	'".$_POST['roommate']."',
 	'".$_POST['bus']."',
-	'".$_POST['activity']."',
 	'".$_POST['activity_1']."',
 	'".$_POST['activity_2']."',		
 	'".$_POST['shirt']."',
@@ -75,14 +73,14 @@ mysql_query($q) or die ("Error in query: $q. ".mysql_error());
 
 // admin emails
 
-mail("Samantha.Ng@fglsports.com", $subject, $message, "From: ".$mailFrom);
-mail("Leah.Carter@fglsports.com", $subject, $message, "From: ".$mailFrom);
-mail("Shelagh.Ell@fglsports.com", $subject, $message, "From: ".$mailFrom);
-mail("brent.garner@fglsports.com", $subject, $message, "From: ".$mailFrom);
+// mail("Samantha.Ng@fglsports.com", $subject, $message, "From: ".$mailFrom);
+// mail("Leah.Carter@fglsports.com", $subject, $message, "From: ".$mailFrom);
+// mail("Shelagh.Ell@fglsports.com", $subject, $message, "From: ".$mailFrom);
+// mail("brent.garner@fglsports.com", $subject, $message, "From: ".$mailFrom);
 
 
 //user email
-mail($_POST['email'], $usersubject, $usermessage, "From: ".$usermailFrom);
+// mail($_POST['email'], $usersubject, $usermessage, "From: ".$usermailFrom);
 
  
 ?>

@@ -25,14 +25,19 @@
 
 
 		<div id="container">
-			<div id="subheading">
-				<h5>November 12 - 14, 2014 &nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp; Rimrock Hotel &nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp; Banff, AB</h5>	
-			</div>	
+			<div style="position:relative; top: 180px;">
+	
+			</div>
+
+			<img src="/images/mountains2.png" style="" />
 				
 			<div id="form-div">
-			
+			<div id="subheading">
+				<h4>Leadership Conference 2015</h4>
+				<h5>October 27 - 29, 2015 &nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp; Banff Springs Hotel &nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp; Banff, AB</h5>
+			</div>
 				<form id="regform">
-					<h2>Conference Registration</h2>
+					<!-- <h2>Conference Registration</h2> -->
 					<h1>Personal Information</h1>
 					<table id="personal-table">
 						<tr>
@@ -67,28 +72,35 @@
 							<td colspan="5"><input type="text" class="long" id="diet"></input></td>
 						</tr>
 						
-						<tr>
+<!-- 						<tr>
 							<td><label>Roommate</label></td>
 							<td colspan="5">
 								<input type="text" class="long" id="roommate"></input>
 								<small>Please note: All AVPs will be sharing rooms, no exceptions</small>
 							</td>
 
-						</tr>	
+						</tr> -->	
 						<tr>
 							<td colspan="3"><label id="label-bus">Will you be taking the bus from Calgary?</label></td>
-							<td>
+							<td colspan="2">
 								
 								<select name="bus" id="bus" class="bus-select">
 								                        <option value=""></option>
 								                        <option value="yes">Yes</option>
 								                        <option value="no">No</option>
 								                    </select>
+								                    <br />
 								
 							</td>
-
+							
+						</tr>
+						<tr> 
+						<td colspan="8">
+							<center><small>* Please note parking at the hotel is $18 this expense will not be covered through the conference</small></center>
+						</td>
 						</tr>
 					</table>
+					<br />
 					<table>
 						<tr>
 							<td class="size-label-td"><label class="size-label" id="label-shirt-size">Shirt Size</label></td>
@@ -157,46 +169,47 @@
 							</td>
 						</tr>											
 					</table>
-					
-					<h1 id="activity-header">Activity Selection &nbsp;&nbsp;&mdash;&nbsp;&nbsp; November 12<sup>th</sup>&nbsp;&nbsp; 2 - 4pm</h1>
+					<br />
+					<h1 id="activity-header">Activity Selection &nbsp;&nbsp;&mdash;&nbsp;&nbsp; You may pick one from each day if you choose</h1>
 					
 					<table>
 						<tr>
-							<td valign="top" width="50%">
-								<h3><input class="actchoice" type="radio" name="activity" value="Opt1" onchange="setFries();">Option 1</h3>
-								<p>Cross Country Skiing <small>(2 Hours)</small></p>
+							<td valign="top" width="55%">
+								<h3>Day 1</h3>
+								<p><input type="radio" name="day1" value="yoga"> Yoga <small>(1 Hour)</small></p>
 								<ul>
-									<li>More than 65 kilometres of groomed, machine-made and natural trails.</li>
-									<li>Intermediate level, beginner may not be available at that time.     </li>
-									<li>Rentals will be available.                                          </li>
+									<li>Class led by Leah-Anne Bignell</li>
 								</ul>
+
+								<p><input type="radio" name="day1" value="trail run"> Trail Run <small>(1 hour)</small></p>
+								<ul>
+									<li>8 – 10KM trail run led one of Calgary’s<br />own ultra-runners Mike Maloney</li>
+									<li>5KM run led by one of FGL’s finest</li>
+								</ul>
+
+								<a class="clear-selection" href="#" onclick="$('input[name=day1]').attr('checked',false);">Clear Day 1 Selection</a>
 							</td>
 							
 							<td valign="top">
-								<h3><input class="actchoice" type="radio" name="activity" value="Opt2" id="option2" onchange="setFries();"> Option 2</h3>
-								<p class="instruction">Select <strong>2</strong> of the following:</p>
-								
-								
-								<p class="activity-title"> <small class="red">FULL!   </small><strike>Biathlon Shoot Range <br /><small style="padding-left: 20px;">(1 Hour, 20 people max/hour)</small></p>
+								<h3>Day 2</h3>
+								<p><input type="radio" name="day2" value="hike"> Hike <small>(1 Hour)</small></p>
 								<ul>
-									<li>The range features 31 firing lanes with Kurvinen electronic targets designed for .22 calibre biathlon rifles. </li>
-									<li>Foothill Biathlon club will be on site to provide equipment and lessons.                                      </li>
+									<li>5KM beginners hike led by Matt Fay</li>
 								</ul>
-								</strike>
-								<p class="activity-title"><input class="checkbox" name="opt2-activity" type="checkbox" id="activity-golf" value="golf" disabled="disabled">Winter Disc Golf <small>(1 Hour)</small></p>
+
+								<p><input type="radio" name="day2" value="crossfit"> Crossfit Class <small>(1 hour)</small></p>
 								<ul>
-									<li>The 9-hole winter disc golf course avoids skier traffic.</li>
+									<li>Geared towards ski &amp; snowboarding<br />led by Jay Raymundo</li>
+									
 								</ul>
-								<p class="activity-title"><input class="checkbox" name="opt2-activity" type="checkbox" id="activity-orienteering" value="orienteering" disabled="disabled">Orienteering <small>(1 Hour)</small></p>
-								<ul>
-									<li>This is a good course for exploring the park at your own pace and developing navigation and map reading skills.</li>
-									<li>You choose which checkpoints to visit and in which order.</li>
-								</ul>
+								<br />
+								<a class="clear-selection" href="#" onclick="$('input[name=day2]').attr('checked',false);">Clear Day 2 Selection</a>
 							</td>
 							
 						</tr>
 						
 					</table>
+					<br />
 					<div id="sendemail"></div>
 					<button type="submit" id="submit" class="btn">Send Registration</button>
 				</form>
@@ -209,40 +222,6 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
 		<script src="js/contact.js"></script>
 
-		<script>
-		
-		function setFries(){
-	    	var el = document.getElementById("option2");
-		    if(el.checked){
-// 				document.getElementById("activity-biathlon").disabled = false;
-				document.getElementById("activity-golf").disabled = false;				
-				document.getElementById("activity-orienteering").disabled = false;	
-				$('.activity-title').css( "color", "white" );
-		    } else {
-				$('.activity-title').css( "color", "#aaaaaa" );
-// 				document.getElementById("activity-biathlon").disabled = true;
-				document.getElementById("activity-golf").disabled = true;				
-				document.getElementById("activity-orienteering").disabled = true;   
-// 				document.getElementById("activity-biathlon").checked = false;
-				document.getElementById("activity-golf").checked = false;
-				document.getElementById("activity-orienteering").checked = false;
-			}
-		 }
-	
-		$(document).ready(function () {
-
-		   $("input[name='opt2-activity']").change(function () {
-
-		      var maxAllowed = 2;
-		      var cnt = $("input[name='opt2-activity']:checked").length;
-		      if (cnt > maxAllowed) {
-		         $(this).prop("checked", "");
-		         alert('Select maximum ' + maxAllowed + ' activities');
-		     }
-		  });
-
-		});
-		</script>
     </body>
 
 </html>

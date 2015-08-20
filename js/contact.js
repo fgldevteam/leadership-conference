@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+
 	//form submission:
 	$("#submit").click(function(){
 		return false;
@@ -7,6 +8,8 @@ $(document).ready(function() {
 	
 	$("#submit").click(function(){					   				   
 		$(".error").hide();
+		$("label").css('color', '#fff');
+
 		var hasError = false;
 		var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
 		
@@ -16,12 +19,12 @@ $(document).ready(function() {
 		var phoneVal = $("#phone").val();
 		var officeVal = $("#office").val();
 		var dietVal = $("#diet").val();
-		var roommateVal = $("#roommate").val();
 //		var flightsVal = $("#flights").val();
 //		var flightsVal = $('input[name=flights]:checked', '#regform').val()		
 		var busVal = $('#bus').val();
 		//var activityVal = $("#activity").val();		
-		var activityVal = $('input[name=activity]:checked', '#regform').val()
+		var activity1Val = $('input[name=day1]:checked', '#regform').val()
+		var activity2Val = $('input[name=day2]:checked', '#regform').val()
 		var shirtVal = $("#shirtsize").val();
 		var jacketVal = $("#jacketsize").val();
 		var shoesVal = $("#shoesize").val();
@@ -66,43 +69,6 @@ $(document).ready(function() {
 			$(window).scrollTop(0);
 		}			
 
-		if(activityVal == null) {
-			$("#activity-header").after('<p class="error">Please choose an activity.</p>');
-			hasError = true;
-			$(window).scrollTop(0);
-		}	
-		
-		if(activityVal == 'Opt2') {
-			
-			
-			var cnt = $("input[name='opt2-activity']:checked").length;
-			//alert(cnt);
-			var maxAllowed = 2;
-			
-			if (cnt != maxAllowed){
-					$("#activity-header").after('<p class="error">Please choose 2 activities.</p>');
-					hasError = true;
-					$(window).scrollTop(0);
-			} else{
-			
-				var values = $("input[name='opt2-activity']:checked").map(function(){
-					return $(this).val();
-				}).get();
-
-
-				var activity_1Val = values[0];
-				var activity_2Val = values[1];
-				
-			//	alert(activity_1 + ", " + activity_2);
-			}
-		}
-		
-		if(activityVal == 'Opt1'){
-			
-			var activity_1Val = 'Cross-Country Skiing';
-			var activity_2Val = '';
-		}
-
 		if(shirtVal == '') {
 			$("#label-shirt-size").css('color', '#c00');
 			hasError = true;
@@ -137,11 +103,9 @@ $(document).ready(function() {
    				  phone: phoneVal,
    				  office: officeVal,
    				  diet: dietVal,
-   				  roommate: roommateVal,
    				  bus: busVal,
-   				  activity: activityVal,
-   				  activity_1: activity_1Val,   				  
-   				  activity_2: activity_2Val,   				  
+   				  activity_1: activity1Val,   				  
+   				  activity_2: activity2Val,   				  
    				  shirt: shirtVal,
    				  jacket: jacketVal,
    				  shoes: shoesVal
@@ -149,7 +113,7 @@ $(document).ready(function() {
    					function(data){
 						$("#regform").slideUp("normal", function() {				  						
 																					
-							$("#regform").before("<h2>Thank You</h2><br /><p>Your submission has been received. You will receive an email from us containing all of your registration info.</p><br />");											
+							$("#regform").before("<h2>Thank You</h2><br /><p>Your registration has been received!</p><br />");											
 						});
    					}
 				 );

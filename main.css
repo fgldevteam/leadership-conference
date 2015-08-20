@@ -5,24 +5,33 @@
 @font-face { font-family: GalaxiePolarisCondensed-Light; font-weight: bold; src: url('fonts/GalaxiePolarisCondensed-Light.otf'); }
 
 body{
-	background-color: #a3b8a8;
+	background-color: #fff;
 	font: arial, sans-serif;
+	background: url('/images/greenbg.png') top left no-repeat fixed;
 }
 
 small.red{ color: #c00;  font-weight: bold; font-size: 13px; }
 #container{
-	width: 1100px;
+
+	width: 600px;
 	height: auto;
 	min-height: 917px;
-	background: transparent url('images/header.jpg') top left no-repeat;
 	margin: 0 auto;
+	
+	/*background: url('/images/mountains.png') top center no-repeat;*/
+	position: relative;
+	top: 20px;
 }
 #subheading{
 	position: relative;
-	top: 310px;
-	left: 320px;
+/*	top: 310px;*/
+/*	left: 320px;*/
+	top: 30px;
+	margin: 0 auto;
 	width: 540px;
 
+	padding-bottom: 40px;
+	padding-top: 0px;
 }
 
 #sendemail{
@@ -31,18 +40,34 @@ small.red{ color: #c00;  font-weight: bold; font-size: 13px; }
 }
 	
 #form-div{
-	padding: 10px 20px 20px 20px;
+	padding: 0px 20px 30px 20px;
+/*	background-color: #477626;*/
+	background: url('/images/green-trans.png') top left repeat;
 	position: relative;
-	top: 320px;
-	left: 320px;
-	background-color: rgba(0,0,0, 0.80);
+	bottom: 218px;
 	height: auto;
-	width: 500px;
+	width: 560px;
 	color: #aaa;
-	margin-bottom: 50px;
+	margin-bottom: 10px;
+	border-left: 1px solid #477626;
+	border-right: 1px solid #477626;
+	border-bottom: 1px solid #477626;
+
+-webkit-box-shadow: -2px 37px 200px -31px rgba(255,255,255,1);
+-moz-box-shadow: -2px 37px 200px -31px rgba(255,255,255,1);
+box-shadow: -2px 37px 200px -31px rgba(255,255,255,1);
+
+/*-webkit-box-shadow: 10px 10px 82px 36px rgba(255,255,255,1);
+-moz-box-shadow: 10px 10px 82px 36px rgba(255,255,255,1);
+box-shadow: 10px 10px 82px 36px rgba(255,255,255,1);*/
+
+/*-webkit-box-shadow: 10px 10px 82px 19px rgba(255,255,255,1);
+-moz-box-shadow: 10px 10px 82px 19px rgba(255,255,255,1);
+box-shadow: 10px 10px 82px 19px rgba(255,255,255,1);*/
+
 }
 
-label{ font: 10px Arial, sans-serif; text-transform: uppercase; text-align: right; padding-right: 10px; display: block; }
+label{ color: #fff; font: 10px Arial, sans-serif; text-transform: uppercase; text-align: right; padding-right: 10px; display: block; }
 label.size-label{
 	width: 40px;
 	padding-right: 10px;
@@ -66,7 +91,7 @@ input[type="text"]{
 	font-size: 16px;
 	background: transparent; 
 	border: none; 
-	border-bottom: 1px solid #aaa;
+	border-bottom: 1px solid #fff;
 	color: #fff;
 	padding: 10px;
 }
@@ -78,17 +103,24 @@ input[type="checkbox"]{
 
 }
 
-input[type="radio"].actchoice{
-    background-color: #ddd;
+a.clear-selection{
+	color: #fff;
+	font: normal 11px Arial, sans-serif;
+	text-transform: uppercase;
+
+
+}
+input[type="radio"]{
+    background-color: #fff;
     background-image: -webkit-linear-gradient(0deg, transparent 20%, hsla(0,0%,100%,.7), transparent 80%),
                       -webkit-linear-gradient(90deg, transparent 20%, hsla(0,0%,100%,.7), transparent 80%);
     border-radius: 10px;
-    box-shadow: inset 0 1px 1px hsla(0,0%,100%,.8),
+/*    box-shadow: inset 0 1px 1px hsla(0,0%,100%,.8),
                 0 0 0 1px hsla(0,0%,0%,.6),
                 0 2px 3px hsla(0,0%,0%,.6),
                 0 4px 3px hsla(0,0%,0%,.4),
                 0 6px 6px hsla(0,0%,0%,.2),
-                0 10px 6px hsla(0,0%,0%,.2);
+                0 10px 6px hsla(0,0%,0%,.2);*/
     cursor: pointer;
     display: inline-block;
     height: 15px;
@@ -98,7 +130,7 @@ input[type="radio"].actchoice{
     -webkit-appearance: none;
 }
 
-input[type="radio"].actchoice:after {
+input[type="radio"]:after {
     background-color: #444;
     border-radius: 25px;
     box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.4),
@@ -111,8 +143,8 @@ input[type="radio"].actchoice:after {
     top: 4px;
     width: 7px;
 }
-input[type="radio"].actchoice:checked:after {
-    background-color: #f66;
+input[type="radio"]:checked:after {
+    background-color: #f00;
     box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.4),
                 inset 0 2px 2px hsla(0,0%,100%,.4),
                 0 1px 1px hsla(0,0%,100%,.8),
@@ -128,6 +160,8 @@ h2{
 	text-transform: uppercase;
 	font-size: 30px;
 	color: #fff;
+	text-align: center;
+	text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.3);
 }
 
 h3{
@@ -136,6 +170,26 @@ h3{
 	font-size: 20px;
 	color: #fff;
 	padding-bottom: 10px;
+
+}
+
+h4{ 
+	font-family:GalaxiePolarisCondensed-Bold;
+	text-transform: uppercase;
+	font-size: 40px;
+	color: #fff;
+	text-align: center;
+
+	text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.3);
+}
+
+h5{
+	color: #fff;
+	text-align: center;
+	font-family:GalaxiePolarisCondensed-Bold;
+	text-transform: uppercase;
+	font-size: 20px;
+	text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.3);
 }
 
 p{ font-family: arial, sans-serif; color: #fff; }
@@ -144,15 +198,9 @@ strong{ color: #fff; }
 
 .activity-title{color: #aaa;}
 
-h5{
-	color: #333;
-	text-align: center;
-	font-family:GalaxiePolarisCondensed-Bold;
-	text-transform: uppercase;
-	font-size: 20px;
-}
 
-small{ font-size: 10px; font-family: arial, sans-serif; font-style: italic; }
+
+small{ color: #fff; font-size: 10px; font-family: arial, sans-serif; font-style: italic; text-align: center;}
 
 ul{
 	font-size: 12px; 
@@ -175,7 +223,7 @@ select{
 	font-size: 16px;
 	background: transparent; 
 	border: none; 
-	border-bottom: 1px solid #aaa;
+	border-bottom: 1px solid #fff;
 	color: #fff;
 	padding: 10px;
 
@@ -206,7 +254,7 @@ select.size-select{
   border: solid #000000 2px;
   text-decoration: none;
 	display: block;
-	width: 180px;
+	width: 280px;
 	margin: 0 auto;
 }
 
