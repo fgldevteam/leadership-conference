@@ -43,10 +43,10 @@ $usermessage .= "Jacket Size: " . $_POST['jacket'] . "\n";
 $usermessage .= "Shoe Size: " . $_POST['shoes'] . "\n";
 
 //connect to DB
-$host = "internal-db.s51258.gridserver.com";
-$user = "db51258";
-$pass = "3nc50Xj8y5";
-$db = "db51258_leadership";
+$host = "localhsot";
+$user = "root";
+$pass = "";
+$db = "leadership";
 
 $connection = mysql_connect($host, $user, $pass) or die ("Unable to connect!");
 mysql_select_db($db) or die ("Unable to select database!"); 
